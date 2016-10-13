@@ -232,10 +232,6 @@ namespace Rahotop
 	template<unsigned int size>
 	using Vectori = Vector<int, size>;
 
-	using Vectori2 = Vectori<2>;
-	using Vectori3 = Vectori<3>;
-	using Vectori4 = Vectori<4>;
-
 	template<unsigned int c, unsigned int r>
 	using Matrixi = Matrix<int,c,r>;
 
@@ -244,6 +240,10 @@ namespace Rahotop
 
 	template<unsigned int c, unsigned int r>
 	using Matrixd = Matrix<double,c,r>;
+
+	using Vectori2 = Vectori<2>;
+	using Vectori3 = Vectori<3>;
+	using Vectori4 = Vectori<4>;
 
 	using Matrixi2 = Matrixi<2,2>;
 	using Matrixi3 = Matrixi<3,3>;
