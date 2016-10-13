@@ -206,12 +206,12 @@ namespace Rahotop
 			return *this;
 		}
 
-		private:
-
 		void set(unsigned int x, unsigned int y, const E& e)
 		{
 			m_matrix[x][y] = e;
 		}
+
+		private:
 
 		void destroy()
 		{
@@ -226,6 +226,36 @@ namespace Rahotop
 		E **m_matrix;
 	};
 
+	template<class E, unsigned int size>
+	using Vector = Matrix<E, 1, size>;
+
+	template<unsigned int size>
+	using Vectori = Vector<int, size>;
+
+	using Vectori2 = Vectori<2>;
+	using Vectori3 = Vectori<3>;
+	using Vectori4 = Vectori<4>;
+
+	template<unsigned int c, unsigned int r>
+	using Matrixi = Matrix<int,c,r>;
+
+	template<unsigned int c, unsigned int r>
+	using Matrixf = Matrix<float,c,r>;
+
+	template<unsigned int c, unsigned int r>
+	using Matrixd = Matrix<double,c,r>;
+
+	using Matrixi2 = Matrixi<2,2>;
+	using Matrixi3 = Matrixi<3,3>;
+	using Matrixi4 = Matrixi<4,4>;
+
+	using Matrixf2 = Matrixf<2,2>;
+	using Matrixf3 = Matrixf<3,3>;
+	using Matrixf4 = Matrixf<4,4>;
+
+	using Matrixd2 = Matrixd<2,2>;
+	using Matrixd3 = Matrixd<3,3>;
+	using Matrixd4 = Matrixd<4,4>;
 }
 
 template<class E, unsigned int c, unsigned int r>
